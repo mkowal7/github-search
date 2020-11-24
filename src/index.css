@@ -8,6 +8,10 @@
   100% { transform: rotate(360deg); }
 }
 
+html, body {
+  height: 100%;
+}
+
 body {
   background-color: #e5e5e5;
 }
@@ -58,10 +62,16 @@ a {
   text-decoration: none;
 }
 
+#root {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+}
+
 .container {
   background-color: #fbfcfd;
   border-radius: 3px;
-  margin: 30px auto;
   min-height: 500px;
   padding: 20px;
   position: relative;
