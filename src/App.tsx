@@ -11,7 +11,11 @@ function App() {
     <div className="container">
       <SearchBox setData={setData} setFetching={setFetching} />
       {data && <UserInfo data={data} />}
-      {isFetching && <div className="loader" />}
+      {isFetching && (
+        <div className="loader">
+          <span className="spinner" />
+        </div>
+      )}
     </div>
   );
 }

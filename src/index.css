@@ -1,9 +1,19 @@
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
 body {
   background-color: #e5e5e5;
 }
 
 button {
-  background-color: #452cdc;
+  background-color: #3498db;
   border-radius: 3px;
   border: none;
   color: white;
@@ -52,7 +62,9 @@ a {
   background-color: #fbfcfd;
   border-radius: 3px;
   margin: 30px auto;
+  min-height: 500px;
   padding: 20px;
+  position: relative;
   width: 400px;
 }
 
@@ -68,4 +80,26 @@ a {
 
 .user-details__name img {
   margin-right: 8px;
+}
+
+.loader {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.7);
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.spinner {
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+  border: 8px solid #f3f3f3; /* Light grey */
+  border-top: 8px solid #3498db;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
 }
