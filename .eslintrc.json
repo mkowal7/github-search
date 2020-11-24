@@ -20,6 +20,9 @@
     "@typescript-eslint"
   ],
   "rules": {
-      "require-jsdoc": "off"
+    "require-jsdoc": "off",
+    "object-curly-spacing": "off",
+    "indent": "off",
+    "camelcase": "off"
   }
 }
