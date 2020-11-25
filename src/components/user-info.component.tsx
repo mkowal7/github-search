@@ -11,12 +11,8 @@ function UserInfo({ data }: Props) {
   const repositories = useMemo<UserData['repositories']>(
     () =>
       data.repositories
-        .sort((a, b) => {
-          if (a.stargazers_count > b.stargazers_count) return 1;
-          else if (a.stargazers_count < b.stargazers_count) return -1;
-          return 0;
-        })
-        .splice(0, REPOSITORIES_LIMIT),
+        .sort((a, b) => b.stargazers_count - a.stargazers_count)
+        .slice(0, REPOSITORIES_LIMIT),
     [data.repositories],
   );
 

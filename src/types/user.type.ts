@@ -1,8 +1,8 @@
 export type User = {
   avatar_url: string;
+  bio: string | null;
   login: string;
   name: string;
-  bio?: string;
 };
 export type Repository = {
   html_url: string;
