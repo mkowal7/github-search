@@ -1,13 +1,13 @@
-export type RESTUser = {
+export type User = {
   avatar_url: string;
   login: string;
   name: string;
   bio?: string;
 };
-export type RESTRepository = {
+export type Repository = {
   html_url: string;
   id: number;
   name: string;
   stargazers_count: number;
 };
-export type User = RESTUser & { repositories: RESTRepository[] };
+export type UserData = User & { repositories: Repository[] };

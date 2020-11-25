@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import SearchBox from './components/search-box.component';
 import UserInfo from './components/user-info.component';
-import { User } from './types/user.type';
+import { UserData } from './types/user.type';
 
 function App() {
-  const [data, setData] = useState<User | null>(null);
+  const [data, setData] = useState<UserData | null>(null);
   const [isFetching, setFetching] = useState(false);
 
   return (

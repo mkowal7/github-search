@@ -1,26 +1,24 @@
-import React, { useEffect, useState } from 'react';
-import { User } from '../types/user.type';
+import React, { useMemo } from 'react';
+import { UserData } from '../types/user.type';
 
 type Props = {
-  data: User;
+  data: UserData;
 };
 
 const REPOSITORIES_LIMIT = 3;
 
 function UserInfo({ data }: Props) {
-  const [repositories, setRepositories] = useState<User['repositories']>([]);
-
-  useEffect(() => {
-    const repositories = data.repositories
-      .sort((a, b) => {
-        if (a.stargazers_count > b.stargazers_count) return 1;
-        else if (a.stargazers_count < b.stargazers_count) return -1;
-        return 0;
-      })
-      .splice(0, REPOSITORIES_LIMIT);
-
-    setRepositories(repositories);
-  }, [data.repositories, setRepositories]);
+  const repositories = useMemo<UserData['repositories']>(
+    () =>
+      data.repositories
+        .sort((a, b) => {
+          if (a.stargazers_count > b.stargazers_count) return 1;
+          else if (a.stargazers_count < b.stargazers_count) return -1;
+          return 0;
+        })
+        .splice(0, REPOSITORIES_LIMIT),
+    [data.repositories],
+  );
 
   return (
     <div className="user-information">
