@@ -28,7 +28,7 @@ function UserInfo({ data }: Props) {
       {repositories.length > 0 && (
         <div className="user-repositories">
           <h2>Top repositories</h2>
-          <ul>
+          <ul data-test="repository-list">
             {repositories.map(({ id, html_url, name }) => (
               <li key={id}>
                 <a href={html_url} target="_blank" rel="noreferrer">
