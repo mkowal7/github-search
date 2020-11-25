@@ -19,11 +19,11 @@ function UserInfo({ data }: Props) {
   return (
     <div className="user-information">
       <div className="user-details">
+        <img alt={data.name} src={data.avatar_url} width={90} height={90} />
         <div className="user-details__name">
-          <img alt={data.name} src={data.avatar_url} width={60} height={60} />
           <h1>{data.name}</h1>
+          {data.bio}
         </div>
-        {data.bio}
       </div>
       {repositories.length > 0 && (
         <div className="user-repositories">
@@ -42,4 +42,5 @@ function UserInfo({ data }: Props) {
     </div>
   );
 }
+
 export default UserInfo;

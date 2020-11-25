@@ -13,14 +13,17 @@ html, body {
 }
 
 body {
-  background-color: #e5e5e5;
+  background-image: linear-gradient(137deg, #1a1e68, #9496b2 100%);
 }
 
 button {
-  background-color: #3498db;
+  background-color: #676ef3;
   border-radius: 3px;
   border: none;
   color: white;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 21px;
   padding: 12px 16px;
 }
 
@@ -32,15 +35,27 @@ form {
 input {
   background-color: #f0f3f4;
   border-radius: 3px;
-  border: 1px solid #e5e5e5;
+  border: 1px solid #0775e2;
+  color: #1f3e5c;
+  font-size: 14px;
+  line-height: 21px;
   margin-right: 8px;
   padding: 12px 16px;
   width: 100%;
 }
 
+input:focus {
+  outline: none;
+}
+
 h1 {
-  font-size: 24px;
-  margin: 0;
+  font-size: 27px;
+  margin: 0 0 8px;
+}
+
+h2 {
+  font-size: 21px;
+  margin: 0 0 16px;
 }
 
 ul {
@@ -52,14 +67,17 @@ li {
   margin-bottom: 8px;
 }
 
-a {
+li a {
   background-color: white;
-  border-radius: 3px;
-  border: 1px solid #e5e5e5;
-  color: #5396f1;
+  border-radius: 4px;
+  border: 1px solid #dcdee3;
+  color: #676ef3;
   display: block;
+  font-size: 16px;
+  line-height: 24px;
   padding: 12px 16px;
   text-decoration: none;
+  box-shadow: 0 4px 8px -4px rgba(26, 26, 26, 0.2);
 }
 
 #root {
@@ -70,7 +88,10 @@ a {
 }
 
 .container {
-  background-color: #fbfcfd;
+  background-image: url('assets/bcg@2x.png');
+  background-repeat: no-repeat;
+  background-size: 440px 540px;
+  background-position: top center;
   border-radius: 3px;
   min-height: 500px;
   padding: 20px;
@@ -82,14 +103,14 @@ a {
   margin-top: 24px;
 }
 
-.user-details__name {
-  align-items: flex-end;
+.user-details {
   display: flex;
+  align-items: flex-start;
   margin-bottom: 16px;
 }
 
-.user-details__name img {
-  margin-right: 8px;
+.user-details__name {
+  margin-left: 24px;
 }
 
 .loader {
