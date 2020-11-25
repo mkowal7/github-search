@@ -16,6 +16,11 @@ function SearchBox({ setFetching, setData }: Props) {
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setError('');
+
+    if (!value) {
+      return;
+    }
+
     setFetching(true);
 
     try {
