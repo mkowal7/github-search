@@ -1,10 +1,10 @@
 export const httpService = {
-  request: <T>(url: string): Promise<T> =>
+  get: <T>(url: string): Promise<T> =>
     fetch(`https://api.github.com/${url}`).then((response) => {
-      if (response.status === 200) {
+      if (response.ok) {
         return response.json();
+      } else {
+        throw new Error(response.statusText);
       }
-
-      throw new Error(response.statusText);
     }),
 };

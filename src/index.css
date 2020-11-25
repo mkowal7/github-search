@@ -30,6 +30,7 @@ button {
 form {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 24px;
 }
 
 input {
@@ -99,10 +100,6 @@ li a {
   width: 400px;
 }
 
-.user-information {
-  margin-top: 24px;
-}
-
 .user-details {
   display: flex;
   align-items: flex-start;
@@ -133,4 +130,11 @@ li a {
   border-radius: 50%;
   width: 80px;
   height: 80px;
+}
+
+.error {
+  font-size: 18px;
+  text-align: center;
+  font-weight: bold;
+  margin: 48px 0 0;
 }
